@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="format-detection" content="telephone=no, email=no" />
+        <meta name="full-screen" content="true" />
+        <meta name="screen-orientation" content="portrait" />
+        <meta name="x5-fullscreen" content="true" />
+        <meta name="360-fullscreen" content="true" />
+        <link rel="stylesheet" type="text/css" href="css/p8.css">
+          <title></title>
+</head>
+<body>
+    <div class="p8">
+        <div class="p8-box">
+            <img class="p8-title" src="img/page9/font_size.png">
+            <!--<span id="tuo" class="p6-btn p6_moveStyle"><img src="img/page9/photo.png"</span>-->
+            <img id="p8Photo" class="p8_btn" src="img/page9/photo.png"/>
+            <img id="p8_wrong" class="p6_wrong" src="img/false.png" />
+            <img id="p8_right" class="p6_right" src="img/right.png" />
+            <img id="p8_goNext" class="p8_Next" src="img/game7.png" onClick="location.href='p9.html'"/>
+            <div class="p8-picBox">
+                <div class="p8-pic airship"><img src="img/page9/airship.png"/></div>
+                <div class="p8-pic missile"><img src="img/page9/missile.png"/></div>
+                <div class="p8-pic Saturn"><img src="img/page9/Saturn.png"/></div>
+                <!--<div class="p8-pic photo"></div>-->
+                <div class="p8-pic car"><img src="img/page9/car.png"/></div>
+                <div class="p8-pic portrait"><img src="img/page9/portrait.png"/></div>
+                <div class="p8-pic Mercury"><img src="img/page9/Mercury.png"/></div>
+                <div class="p8-pic yellow"><img src="img/page9/yellow.png"/></div>
+                <div class="p8-pic green"><img src="img/page9/green.png"/></div>
+            </div>
+            <div class="guide-hintBox">
+                <img class="p8-hint" src="img/game7_hint.png">
+<!--                <img class="p8-warn" src="img/warn.png">-->
+            </div>
+            <div class="p8-warnBox">
+				<img class="p8-warn" src="img/warn.png" onclick="showIt()">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+			var obj = document.getElementById('p8Photo');
+			console.log(obj);
+			obj.addEventListener('touchmove', function(event) {
+			     // 如果这个元素的位置内只有一个手指的话
+			    if (event.targetTouches.length == 1) {
+			　　　　 event.preventDefault();// 阻止浏览器默认事件，重要 
+			        var touch = event.targetTouches[0];
+			        // 把元素放在手指所在的位置
+			        	obj.style.left = touch.pageX-50 + 'px';
+			        	obj.style.top = touch.pageY-50 + 'px';
+			        	
+			        	var top = parseInt(touch.pageY-0)
+			        	var left = parseInt(touch.pageX-0)
+			        	if(top<=90&&left<=100){
+			        		console.log(obj);
+			        		obj.onclick=function(){
+			        			var goNext = document.getElementById('p8_goNext');
+			        			var p8Right = document.getElementById('p8_right');
+			        			p8Right.style.display='block';
+			        			setInterval(function(){
+								goNext.style.display='block';
+								},2000)
+//			        			alert('通关了')
+			        		}
+			        		
+			        	}
+			        }
+			}, false);
+			
+function showIt(){
+	var p8Guide=document.getElementsByClassName('guide-hintBox')[0];
+	if(p8Guide.style.display=='none'){
+		p8Guide.style.display='block';
+		
+	}else{
+		p8Guide.style.display='none';
+	}
+}
+			
+//	function kkk(){
+//		var goNext = document.getElementById('p6_goNext');
+//		var p6Right = document.getElementById('p6_right');
+//		p6Right.style.display='block';
+//		setInterval(function(){
+//			goNext.style.display='block';
+//		},2000)
+//	}
+</script>
+</html>
