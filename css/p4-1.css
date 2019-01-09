@@ -1,0 +1,208 @@
+@charset "utf-8";
+html{
+  font-size: 62.5%;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: none;
+}
+/*body{
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+  overflow: hidden;
+  font-family: '微软雅黑';
+  -webkit-font-smoothing: antialiased;
+}*/
+.p4{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 0px;
+  /* float: left; */
+  background-image: url('../img/page4/p4bg.png');
+  display:none;
+}
+.p4{
+    transform:perspective(2000px);
+}
+#three{
+  position: absolute;
+  width:6%;
+  top:4%;
+  left:40%;
+  z-index:999;
+}
+#six{
+  position: absolute;
+  width:5%;
+  top:11%;
+  left:23%;
+  z-index:999;
+}
+#zer{
+  position:absolute;
+  width:5%;
+  top:11%;
+  left:29%;
+  z-index:999;
+}
+#input{
+  height:6%;
+  width:33%;
+  position:absolute;
+  background:#ffd169;
+  border:1px dashed #000;
+  position: absolute;
+  top:23%;
+  border-left:none;
+  left:5%;
+  z-index:1;
+}
+.p4-t{
+  position: absolute;
+  width:90%;
+  top:1%;
+  left:1%;
+}
+.r-t{
+  width:50%;
+  position: absolute;
+  bottom:32%;
+  animation-name:rt;
+ animation-duration: 1.5s;
+ animation-timing-function: linear;
+ animation-direction: normal;
+animation-iteration-count:infinite;
+animation-fill-mode:none;
+}
+@keyframes rt{
+  0%{
+    transform:translate(-40%,0%) scale(1.1);
+   
+  }
+  100%{
+    transform: translate(260%,0%) scale(0.1);
+  }
+}
+.p4-c{
+  position: absolute;
+  width:60%;
+  top:58%;
+  left:14%;
+  z-index: 1;
+}
+.p4_cr1{
+  position: absolute;
+  width:11%;
+  z-index:10;
+  bottom:26.5%;
+  margin-left:43%;
+  transform:perspective(110px) rotateY(47deg);
+  animation: cr1 1s linear infinite;
+}
+@keyframes cr1{
+  0%{ transform:  perspective(110px) rotateY(48deg) rotateZ(360deg) ;}
+  25%{ transform:  perspective(110px)  rotateY(48deg) rotateZ(0deg)  ;}
+  50%{ transform:   perspective(110px) rotateY(48deg) rotateZ(-360deg) ; }
+  75%{ transform:  perspective(110px)  rotateY(48deg) rotateZ(-720deg) ;}
+  100%{ transform:  perspective(110px) rotateY(48deg)  rotateZ(-1080deg) ;}
+}
+.p4_cr2{
+  position: absolute;
+  width:8.5%;
+  z-index:10;
+  bottom:29%;
+  margin-left:63.5%;
+  transform:perspective(110px) rotateY(60deg);
+  animation: cr1 1s linear infinite;
+}
+.p4-co{
+  position: absolute;
+  width:50%;
+  bottom:26%;
+  left:9%;
+  animation-name:p4-co;
+ animation-duration: 1.5s;
+ animation-timing-function: linear;
+ animation-direction: normal;
+animation-iteration-count:infinite;
+animation-fill-mode:none;
+}
+@keyframes p4-co{
+  0%{
+    transform:translate(-40%,0%) scale(1.1);
+   
+  }
+  100%{
+    transform: translate(200%,-200%) scale(0.1);
+  }
+}
+.p4_warn{
+  position:absolute;
+  z-index:3;
+  width:20%;
+  bottom:10%;
+  margin-left:43%;
+  width:14%;
+}
+.p4-h{
+  width:50%;
+  position: absolute;
+  z-index:100;
+  bottom:20%;
+  left:25%;
+  display: none;
+}
+.p4_r{
+  position: absolute;
+	width: 20%;
+	z-index: 50;
+	top: 40%;
+	left: 40%;
+	animation: p4_wrong 2.5s linear;
+	opacity: 0.0;
+	display: none;
+}
+.p4_f{
+  position: absolute;
+	width: 20%;
+	z-index: 50;
+	top: 40%;
+	left: 40%;
+	animation: p4_wrong 2.5s linear;
+	opacity: 0.0;
+	display: none;
+}
+@keyframes p4_wrong{
+	0%{top: 40%; left: 40%; width: 20%; opacity: 0.0;}
+	50%{top: 30%; left: 25%; width: 50%; opacity: 1;}
+	100%{top: 40%; left: 40%; width: 20%; opacity: 0.0;}
+}
+.p4_messageBox{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 10000; 
+	display: none;  
+}
+.answer{
+    position: absolute;
+    width: 80%;
+    margin-top: 50%;
+    margin-left: 10%;
+    float: left;
+}

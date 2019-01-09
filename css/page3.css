@@ -1,0 +1,330 @@
+@charset "utf-8";
+html{
+  font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: none;
+}
+/*body{
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+  overflow: hidden;
+  font-family: '微软雅黑';
+  -webkit-font-smoothing: antialiased;
+}*/
+.p3{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 0px;
+  /* float: left; */
+  background-image: url('../img/page3/p3bg.png');
+  position:relative;
+  background-size: 100% 100%;
+  display:none;
+}
+/*@keyframes snow
+{
+0% {transform:translate(x,0)}
+100%{transform:translate(x,180px)}
+}*/
+.snow{
+	width: 100%;
+}
+.snow1{
+  position:absolute;
+  width:12%;
+  margin-left:85%;
+  margin-top:7%;
+	z-index: 6;
+	/*animation: snow 5s linear infinite;*/
+}
+.p3-t{
+  position:absolute;
+  z-index:0;
+  width:55%;
+  margin-top:5%;
+  margin-left:5%;
+}
+.r-three{
+  width:100%;
+  position:absolute;
+  margin-top:45%;
+  margin-left:20%;
+}
+@keyframes myfirst
+{
+0% {transform:translate(0%,0%)}
+100%{transform:translate(1.5%,1.5%)}
+}
+.r-m-t{
+  width:80%;
+  position: absolute;
+  margin-top:51%;
+  margin-left:22%;
+	animation: myfirst 0.1s linear infinite; 
+}
+.r-two{
+  width:117%;
+  position:absolute;
+  margin-top:54%;
+}
+
+@keyframes wtree{
+	0%{transform:translatex(-20%)}
+	100%{transform:translatex(250%)}
+}
+.r-m-t1{
+  position: absolute;
+  width:220%;
+	margin-top:44%;
+	margin-left: -139%;
+	animation: myfirst 0.1s linear infinite; 
+}
+/*margin-top:61%;58% -26%*/
+.w-tree{
+  width:30%;
+  position:absolute;
+  margin-top:35%;
+  margin-left:3%;
+	animation: wtree 1s linear infinite; 
+}
+.r-m{
+  width:100%;
+  height:25%;
+  position:absolute;
+  margin-top:69%;
+}
+.p3-r-m{
+  position:absolute;
+  width:100%;
+  margin-top: 85%;
+  z-index:1;
+	animation: myfirst 0.1s linear infinite; 
+}
+.r-one{
+  width:90%;
+  height:20%;
+  position: absolute;
+  margin-top:106%;
+  margin-left:17%;
+}
+.r-m-o{
+  width:152%;
+  height:20%;
+  position: absolute;
+  margin-top:108%;
+  margin-left:17%;
+	animation: myfirst 0.1s linear infinite; 
+}
+.snow2{
+  width:9%;
+  position: absolute;
+  margin-top:57%;
+  margin-left:85%;
+	z-index: 6;
+	animation:snow2 3s linear infinite;
+	/*animation: snow 1s linear infinite;*/
+}
+@keyframes snow2{
+	0%{
+		top:0%;
+	}
+	100%{
+		top:80%;
+	}
+}
+.snow1{
+  width:9%;
+  position:absolute;
+  margin-left:58%;
+  margin-top:40%;
+  animation:snow3 3s linear infinite;
+}
+@keyframes snow3{
+	0%{
+		top:0%;
+	}
+	100%{
+		top:76%;
+	}
+}
+.c_c1{
+  width:45%;
+  position: absolute;
+  margin-top:72%;
+  margin-left:-20%;
+  z-index:2;
+  display:block;
+}
+.c_c1_1{
+	width:45%;
+  position: absolute;
+  margin-top:72%;
+  margin-left:-280%;
+  z-index:2;
+  display:none;
+  animation: c1 2s linear;
+}
+@keyframes c1{
+	0%{
+		margin-left:-20%;
+	}
+	100%{
+		margin-left:280%;
+	}
+}
+.c_c2{
+  width:60%;
+  position: absolute;
+  margin-top: 66%;
+  margin-left: 65%;
+  display:block;
+}
+.c_c2_1{
+	width:60%;
+  position: absolute;
+  margin-top: 66%;
+  margin-left: 280%;
+  display:none;
+  animation:c2 2s linear;
+}
+@keyframes c2{
+	0%{
+		margin-left:65%;
+	}
+	100%{
+		margin-left:280%;
+	}
+}
+.c-h{
+  width:85%;
+  position:absolute;
+  margin-top:70%;
+  margin-left:12%;
+  z-index: 4;
+}
+.p3_warn{
+  position:absolute;
+  z-index:3;
+  width:20%;
+  bottom:10%;
+  margin-left:43%;
+  width:14%;
+}
+.gh{
+  width:50%;
+  position: absolute;
+  z-index:7;
+  bottom:20%;
+  left:25%;
+  display: none;
+}
+.right{
+	position: absolute;
+	width: 20%;
+	z-index: 5;
+	top: 40%;
+	left: 40%;
+	animation: p3Right 2.5s linear;
+	opacity: 0.0;
+	display: none;	
+}
+@keyframes p3Right{
+	0%{top: 40%; left: 40%; width: 20%; opacity: 0.0;}
+	50%{top: 30%; left: 25%; width: 50%; opacity: 1;}
+	100%{top: 40%; left: 40%; width: 20%; opacity: 0.0;}
+}
+.p3_messageBox{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 10000; 
+	display: none; 
+}
+.g{
+    position: absolute;
+    width: 80%;
+    margin-top: 50%;
+    margin-left: 10%;
+    float: left;
+}
+.car{
+	position: relative;
+}
+.hero-circle,.black-circle{
+	position: absolute;
+}
+
+@-webkit-keyframes rotate{from{-webkit-transform: rotate(0deg)}
+    to{-webkit-transform: rotate(-360deg)}
+}
+@keyframes rotate{from{transform: rotate(0deg)}
+    to{transform: rotate(-359deg)}
+}
+.black-circle-1{
+	width: 7%;
+	margin-top: 79%;
+	margin-left: 10%;
+	z-index: 3;
+	-webkit-animation: rotate 0.4s linear infinite;
+  animation: rotate 0.4s linear infinite; 
+}
+.black-circle-2{
+	width: 8%;
+	margin-top: 76%;
+	margin-left: 72%;
+	z-index: 3;
+	-webkit-animation: rotate 0.4s linear infinite;
+	animation: rotate 0.4s linear infinite; 
+}
+.hero-circle-1{
+	width: 12%;
+	margin-top: 84%;
+	margin-left: 17%;
+	z-index: 5;
+	-webkit-animation: rotate 0.3s linear infinite;
+	animation: rotate 0.3s linear infinite; 
+}
+.hero-circle-2{
+	width: 12%;
+	margin-top: 84%;
+	margin-left: 61%;
+	z-index: 5;
+	-webkit-animation: rotate 0.3s linear infinite;
+	animation: rotate 0.3s linear infinite; 
+}
+@media screen and (orientation:landscape){
+  .c_c1{
+  width:45%;
+  position: absolute;
+  margin-top:72%;
+  margin-left:-20%;
+  z-index:2;
+  transition:translateX(280%) all .5s linear;
+
+}
+@media screen and (orientation:landscape){
+  .c_c2{
+  width:60%;
+  position: absolute;
+  margin-top: 66%;
+  margin-left: 65%;
+  transition:translateX(280%) all .5s linear;
+
+}

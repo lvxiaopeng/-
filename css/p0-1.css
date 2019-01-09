@@ -1,0 +1,161 @@
+@charset "utf-8";
+html{
+  font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: none;
+}
+body{
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+  overflow: hidden;
+  font-family: '微软雅黑';
+  -webkit-font-smoothing: antialiased;
+}
+/*.p0{
+  width:100%;
+  max-height:600px;
+  background-image:url('page0/p0bg.png');
+
+}*/
+.p0{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 0px;
+  /* float: left; */
+  background-image: url('../img/page0/p0bg.png');
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  display:block;
+}
+.loader{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+div.pt>.p0_title{
+  width:90%;
+  position:absolute;
+  margin-top: 120%;
+  margin-left:60%;
+}
+div.progress{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+div.progress>.p0_progress{
+  width:80%;
+  position:absolute;
+  margin-top:70%;
+  z-index:1;
+}
+div.pt{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.p0_car{
+  position:absolute;
+  margin-top:70%;
+  margin-left:38%;
+  height:3%;
+  z-index:5;
+  animation: car-move 2.8s linear forwards;
+}
+@keyframes car-move{
+	from{margin-left: -41.5%;}
+	to{margin-left: 35%;}
+}
+@keyframes to-r1{
+	from{margin-left: -38.5%;}
+	to{margin-left: 43%;}
+}
+@keyframes to-r2{
+	from{margin-left: -38.5%;}
+	to{margin-left: 43%;}
+}
+span.p0-pro{
+  position:absolute;
+  margin-top:65%;
+  left:43%;
+  display: flex;
+  height: 1.10rem;
+  justify-content:center;
+  align-items:center;
+  color: white;
+  z-index: 6;
+  animation: to-r1 3s linear forwards;
+}
+span.p0-sj{
+  position:absolute;
+  margin-top: 67%;
+  left: 45%;
+  animation:to-r2 3s linear forwards;
+}
+@keyframes jd{
+	from{margin-right: 100%;}
+	to{margin-right: 0%;}
+}
+.jd{
+	width: 80%;
+	position: absolute;
+	margin-top: 69.5%;
+	margin-left: 0%;
+	height: 15px;
+	z-index: 2;
+	opacity: 1;
+	border-radius: 5px;
+}
+.jdt{
+	position: relative;
+	margin-right: 100%;
+	height: 20px;
+	z-index: 3;
+	opacity: 0.5;
+	animation:jd 3s linear forwards;
+	background:-webkit-linear-gradient(0deg,#fff,blue);
+}
+road-cover {
+  position: absolute;
+  left: 0;
+  bottom: 0.2rem;
+  height: 1.2rem;
+  width: 1%;
+  background-image: -webkit-linear-gradient(right, rgba(24, 113, 197, 0.9) 0, rgba(24, 113, 197, .2) 100%);
+}
+.p0-sj{
+  display: block;
+  width: 0;
+  border-top: 0.8rem solid #1871C5;
+  border-left: 0.5rem solid rgba(0, 0, 0, 0);
+  border-right: 0.5rem solid rgba(0, 0, 0, 0);
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0);
+}
+
+.p0-pro {
+  display: block;
+  width: 3rem;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: #1871C5;
+  font-size: 10px;
+  color: #444;
+  text-align: center;
+}

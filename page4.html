@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="full-screen" content="true" />
+  <meta name="screen-orientation" content="portrait" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="360-fullscreen" content="true" />
+ 	<title></title>
+  
+  <link rel="stylesheet" href="css/p0-1.css" />
+  <link rel="stylesheet" href="css/p1-1.css" />
+  <link rel="stylesheet" href="css/page2.css" />
+  <link rel="stylesheet" href="css/page3.css" />
+  <link rel="stylesheet" type="text/css" href="css/p4-1.css">
+	<style>
+		.inputDiv{
+			width: 20px;
+			line-height: 20px;
+			margin: 4px 10px;
+		}
+	</style>
+ </head>
+ <body>
+ 	<div class="p0">
+		<div class="loader">
+        	<span class="p0-pro" id="sl"></span>
+        	<span class="p0-sj"></span>
+        <div class="jd">
+        	<div class="jdt"></div>
+        </div>
+        <img src="img/page0/p0-car.png" class="p0_car">
+      <div class="pt">
+        <img src="img/page0/p0-title.png" class="p0_title">
+      </div>
+      <div class="progress">
+          <img src="img/page0/progress-bar.png" class="p0_progress">
+      </div>
+    </div>
+	</div>
+ 	<div class="p1">
+		<div class="p1-box" id="alpha">
+			<img src="img/page1/p1-t.png" class=" p1-t">
+			<img src="img/page1/p1-r.png" class="p1-r">
+			<img src="img/page1/p1-l.png" class="p1-l"> 
+			<img src="img/page1/p1-title.png" class="pt">
+			<img src="img/page1/head.gif" class="gf">
+			<img src="img/page1/car-btm.png" class="c-btm">
+			<img src="img/page1/play.png" class="play" onclick="p1_p2()">
+		</div>
+	</div>
+ 	<div class="p2" id="alpha" id='beta' id="gamma">
+		<img src="./img/page2/p2-title.png" class="p2-t">
+		<div class="car">
+		<img src="./img/page2/p2-car.png" id="thisCar" class="p2-car">
+		<img src="./img/page2/car-back.png" alt="" / class="c_p" id="c_p">
+		<img src="./img/page2/boxs6.png" id="boxs6">
+		<img src="./img/page2/boxs5.png" id="boxs5">	
+		<img src="./img/page2/boxs4.png" id="boxs4">
+		<img src="./img/page2/boxs2.png" id="boxs2">
+		<img src="./img/page2/boxs3.png" id="boxs3">
+		<img src="./img/page2/boxs1.png" id="boxs1">
+		<img src="./img/page2/boxs0.png" id="boxs0">
+		<div>
+			<img src="./img/warn.png" class="p2_warn" onClick="showIt2()">
+			<div>
+				<img src="./img/game1_hint.png" class="p2_h2"  style="display:none">
+			</div>
+		</div>
+		<img src="./img/right.png" class="right" id="Right">
+		<img src="img/game2.png" class="g" id="message" onClick="p2_p3()'">
+	</div>
+ 	<div class="p3">
+		<div>
+			<img src="img/page3/p3-title.png" class="p3-t">
+		</div>
+		<div class="snow">
+			<img src="img/page3/snow.png" class="snow1" id="snow1" >
+			<img src="img/page3/snow.png" class="snow2" id="snow2" >
+		</div>
+ 		<div>
+			<img src="img/page3/road-three.png" class="r-three">
+			<img src="img/page3/road-mid-three.png" class="r-m-t">
+			<img src="img/page3/road-two.png" class="r-two">
+			<img src="img/page3/road-mid-two.png" class="r-m-t1">
+			<img src="img/page3/road-one.png" class="r-one">
+			<img src="img/page3/road-mid-one.png" class="r-m-o">
+		</div>
+		<div>
+			<img src="img/page3/warn-tree.png" class="w-tree">
+		</div>
+		<div>
+			<img src="img/page3/road-main.png" class="r-m">
+			<img src="img/page3/p3-road-mid.png" class="p3-r-m">
+		</div>
+		<div class="car">
+			<img src="img/page3/car-black.png" id="c1" class="c_c1">
+			<img src="img/page3/car-black.png" id="c2" class="c_c2">
+			<img src="img/page3/car-black.png" id="c_c1" class="c_c1_1">
+			<img src="img/page3/car-black.png" id="c_c2" class="c_c2_1">
+			<img src="img/page3/car-hero.png" class="c-h">
+			<img src="img/page3/circle2.png"  id="cr1" class="black-circle-1 black-circle">
+			<img src="img/page3/circle2.png" id="cr2" class="black-circle-2 black-circle">
+			<img src="img/page3/circle.png" class="hero-circle-1 hero-circle" >
+			<img src="img/page3/circle.png" class="hero-circle-2 hero-circle" >
+		</div>
+		<div>
+			<img src="img/warn.png" class="p3_warn" onclick="showIt3()">
+		</div>
+		<div>
+			<img src="img/game2_hint.png" class="gh">
+		</div>
+		<div>
+			<img src="img/right.png" id='p3_r' class="right">
+		</div>
+		<div class="p3_messageBox" id="p3_message">
+			<img src="img/game2.png" class="g" onClick="p3_p4()">
+		</div>
+	</div>
+ 	<div class="p4">
+ 			<img src="img/page4/num_3.png" id="three" class="div">
+ 			<img src="img/page4/num_6.png" id="six" class="div">
+ 			<img src="img/page4/num_0.png" id="zer" class="div">
+ 			<img src="img/page4/p4_title.png" class="p4-t">
+ 			<div id="input"></div>
+ 			<img src="img/page4/rel-tree.png" class="r-t">
+ 			<img src="img/page4/p4-car.png" class="p4-c">
+ 			<img src="img/page4/circle.png" class="p4_cr1">
+ 			<img src="img/page4/circle.png" class="p4_cr2">
+ 			<img src="img/page4/color.png" class="p4-co">
+ 			<img src="img/warn.png" class="p4_warn" onclick="showiT4()">
+ 			<img src="img/game3_hint.png" class="p4-h">
+ 			<img src="img/right.png" class="p4_r"  id="p4Right">
+ 			<img src="img/false.png" class="p4_f" id="p4Flase">
+ 			<div class="p4_messageBox" id="p4_message">
+ 				<img src="img/game3.png" class="answer" onClick="p4_p5()'">
+ 			</div>
+ 	</div>
+ </body>
+ <script src="js/page.js"></script>
+ <script src="js/page1.js"></script>
+ <scrit src="js/page2.js"></scrit>
+ <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+ <script type="text/javascript" src="js/page3.js"></script>
+ <script src="js/ion.sound.js"></script>
+ <script src="js/page4.js"></script>
+ <script>
+ 	var p2_w=document.getElementsByClassName('p2_warn')[0];
+      var p2_h=document.getElementsByClassName("p2_h2")[0];
+    function showIt2(){
+      if(p2_h.style.display=="none"){
+        p2_h.style.display="block";
+      }else{
+        p2_h.style.display="none";
+      }
+    }
+ 	function p1_p2(){
+ 		var p1=document.getElementsByClassName("p1")[0];
+ 		var p2=document.getElementsByClassName("p2")[0];
+ 		var p0=document.getElementsByClassName('p0')[0];
+ 		if(p2.style.display=='none'){
+ 			p1.style.display='none';
+ 			p2.style.display='block';
+ 		}else{
+ 			p1.style.display='block';
+ 			p2.style.display='none';
+ 		}
+ 	}
+ 	function p2_p3(){
+ 		var p2=document.getElementsByClassName('p2')[0];
+ 		var p3=document.getElementsByClassName('p3')[0];
+ 		if(p3.style.display=='none'){
+ 			p2.style.display='none';
+ 			p3.style.display='block';
+ 		}else{
+ 			p2.style.display='block';
+ 			p3.style.display='none';
+ 		}
+ 	}
+ 	function p3_p4(){
+ 		var p3=document.getElementsByClassName('p3')[0];
+ 		var p4=document.getElementsByClassName('p4')[0];
+ 		if(p4.style.display=='none'){
+ 			p3.style.display='none';
+ 			p4.style.display='block';
+ 		}else{
+ 			p3.style.display='block';
+ 			p3.style.display='none';
+ 		}
+ 	}
+ </script>
+ </html> 

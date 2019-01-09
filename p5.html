@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="full-screen" content="true" />
+  <meta name="screen-orientation" content="portrait" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="360-fullscreen" content="true" />
+  <link rel="stylesheet" type="text/css" href="css/p5.css">
+	<title></title>
+</head>
+<body id="cc">
+	<div class="p5">
+        <div class="p5-box">
+            <img src="img/page5/p5bg2.png" class="right-bg">
+            <img src="img/page5/p5bg1.png" class="left-bg">
+            <img class="p5-road" src="img/page5/road.png">
+            <img class="p5_road_white" src="img/page5/road-one-white.png">
+            <img class="p5-people" src="img/page5/p5-people.png">               
+            <img class="p5_car" src="img/page5/p5-car.png">
+            <img class="p5_car1" src="img/page5/p5-car.png">
+            <!--<div class="p5-car-circle-box">-->
+            <img class="p5_car_circle" src="img/page3/circle.png">
+            <img class="p5_car_circle1" src="img/page3/circle.png">
+            <img class="p5_car_circle2" src="img/page3/circle.png">
+            <img class="p5_wrong" src="img/false.png" />
+            <img class="p5_right" src="img/right.png" />
+            <div class="p5_messageBox">
+            	<img class="p5_message" onClick="location.href='p6.html'" src="img/game4.png" />
+            </div>
+            <!--</div>-->
+            <img class="p5-title" src="img/page5/p5-title.png">
+            <ul class="p5-btn">
+              <li class="p5_li" onclick="wrong()">晃大灯</li>
+              <li class="p5_li" onclick="wrong()">打方向</li>
+              <li class="p5_li" onclick="wrong()">按喇叭</li>
+            </ul> 
+            <div class="p5-guidBox">
+            	<img class="p5_guid_hint" src="img/game4_hint.png"/>
+            </div>
+            <div class="p5-warn-box">
+                <img class="p5_warn" src="img/warn.png" onclick="showIt()">
+            </div>                          
+        </div>
+	</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+//	var p5Timer = 0;
+	window.onload=function(){
+
+		var p5Timer = 0;
+		
+		
+		function timerFun(){
+			timer = setInterval(function(){
+				var picMessage = document.getElementsByClassName('p5_messageBox')[0];
+				var picRoadWhite = document.getElementsByClassName('p5_road_white')[0];
+				var picRight = document.getElementsByClassName('p5_right')[0];
+
+				var p5Car = document.getElementsByClassName('p5_car')[0];
+
+				var p5Car1 = document.getElementsByClassName('p5_car1')[0];
+
+				var p5Circle =document.getElementsByClassName('p5_car_circle')[0];
+
+				var p5Circle1 =document.getElementsByClassName('p5_car_circle1')[0];
+
+				var p5Circle2 =document.getElementsByClassName('p5_car_circle2')[0];
+
+
+				
+				p5Timer += 0.5;
+				console.log(p5Timer);
+
+				if(p5Timer==1.5){
+					p5Circle2.style.display='block';
+				}else if(p5Timer==5){
+					p5Car.style.display='none';
+					p5Circle.style.display='none';
+					p5Circle2.style.display='none';
+
+					p5Car1.style.display='block';
+					p5Circle1.style.display='block';
+				}else if(p5Timer==7){
+					picRight.style.display='block';			
+				}else if(p5Timer==10){
+					picMessage.style.display='block';
+					clearInterval(timer);
+				};
+				
+				
+				
+			},500);
+		}
+		
+		timerFun()
+		
+		window.ontouchstart = function(event) { //重置计时器
+				p5Timer = 0;
+				clearInterval(timer);
+				timerFun()
+		}
+		
+		
+	}
+	
+	
+	function showIt(){
+	var p5_w=document.getElementsByClassName('p5_warn')[0];
+	var p5_h=document.getElementsByClassName('p5_guid_hint')[0];
+	if(p5_h.style.display=='none'){
+		p5_h.style.display='block';
+		
+	}else{
+		p5_h.style.display='none';
+	}
+	}
+	
+	function wrong(){
+	var btnwrong = document.getElementsByClassName('p5_li')[0];
+	var picWrong =document.getElementsByClassName('p5_wrong')[0];
+
+	picWrong.style.display='none';
+	picWrong.style.display='block';
+	setTimeout(function() {
+		picWrong.style.display = "none";
+	},1000);
+	}	
+
+
+
+</script>
+</html>

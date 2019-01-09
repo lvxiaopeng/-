@@ -1,0 +1,363 @@
+ @charset "utf-8"; 
+html {
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: none;
+  }
+body {
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    /* background-image: url('../img/page0/p0bg.png'); */
+    overflow: hidden;
+    font-family: '微软雅黑';
+    -webkit-font-smoothing: antialiased;
+  }
+.p7{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    background: url("../img/page7/p7bg.png");
+}
+.p7_wrong{
+	position: absolute;
+	width: 20%;
+	z-index: 5;
+	top: 40%;
+	left: 40%;
+	animation: p5_wrong 2.5s linear;
+	opacity: 0.0;
+	display: none;
+}
+@keyframes p5_wrong{
+	0%{top: 40%; left: 40%; width: 20%; opacity: 0.0;}
+	50%{top: 30%; left: 25%; width: 50%; opacity: 1;}
+	100%{top: 40%; left: 40%; width: 20%; opacity: 0.0;}
+}
+.p7_right{
+	position: absolute;
+	width: 20%;
+	z-index: 5;
+	top: 40%;
+	left: 40%;
+	animation: p5_wrong 2.5s linear;
+	opacity: 0.0;
+	display: none;	
+}
+.p7-box {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.imgBox{
+	position:absolute
+	height: 400%;
+	width: 500%;
+	left: -200%;
+	top: -150%;	
+	display: none;
+}
+/*#img{
+	position: absolute;
+	width: 300%;
+	height: 500%; 
+ 	align-content: center;
+	left: 100%;
+	top: 200%;
+	z-index: 50; 	
+}*/
+#img{
+	position: absolute;
+	width: 100%;
+	height: 100%; 
+ 	align-content: center;
+	left: 0%;
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	display: block;
+	z-index: 50;
+/*	animation: img 3s linear; */		
+}
+/*@keyframes img{
+	from{left: -200%; right: -200; bottom: -200%; top: 200%; height: 300%; width: 100%;}
+	to{left: 0%; right: 0%; bottom: 0%; top: 0%; height: 100%; width: 100%;}
+}*/
+.p7-bg {
+    width: 100%;
+}
+.p7-title{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 85%;
+    height: auto;
+    width: 80%;
+    z-index: 5;  
+}
+.p7-car-big{
+    width: 30%;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    transform: scale(3);
+    -webkit-transform: scale(3);
+    -webkit-animation: p7carcome 1s;
+    animation: p7carcome 1s;    
+}
+@keyframes p7carcome{
+  0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+
+  }
+  100% {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
+}
+.p7-people{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* right: 0; */
+    /* bottom: 0; */
+    /* -webkit-transform: scale(8);
+    transform: scale(8); */
+    /* opacity: 0; */
+    width: 100%;
+    height: 100%;    
+}
+#con{
+	/*display: flex;
+	justify-content:center; 
+	align-items:center; */
+}
+#img{
+	display: flex;
+	justify-content:center; 
+	align-items:center; 
+}
+.people1{
+    position: absolute;
+    top: 17.5%;
+    left: 29%;
+    width: 20.5%;
+    animation: people1 3s;
+}
+@keyframes people1{
+	from{top: -17.5%; left: -29%;}
+	to{top: 17.5%; left: 29%;}
+}
+.people2{
+    position: absolute;
+    top: 26.5%;
+    left: 54.5%;
+    width: 9.7%;
+    animation: people2 3s;
+}
+@keyframes people2{
+	from{top: -26.5%; left: 45%;}
+	to{top: 26.5%; left: 54.5%;}
+}
+.people3{
+    position: absolute;
+    top: 18%;
+    left: 72%;
+    width: 16%;
+    animation: people3 3s;
+}
+@keyframes people3{
+	from{top: -18%; left: 100%;}
+	to{top: 18%; left: 72%;}
+}
+.people4{
+    position: absolute;
+    top: 27.5%;
+    left: 3.7%;
+    width: 19.4%;
+    animation: people4 3s;
+}
+@keyframes people4{
+	from{top: 20%; left: -30%;}
+	to{top: 27.5%; left: 3.7%;}
+}
+.people5{
+    position: absolute;
+    top: 31.6%;
+    left: 72.4%;
+    width: 20.5%;
+    animation: people5 3s;
+}
+@keyframes people5{
+	from{top: 15%; left: 130%;}
+	to{top: 31.6%; left: 72.4%;}
+}
+.people6{
+    position: absolute;
+    top: 43%;
+    left: 4%;
+    width: 15.5%;
+    animation: people6 3s;
+}
+@keyframes people6{
+	from{top: 35%; left: -30%;}
+	to{top: 43%; left: 4%;}
+}
+.people7{
+    position: absolute;
+    top: 49%;
+    left: 80.6%;
+    width: 18%;
+    animation: people7 3s;
+}
+@keyframes people7{
+	from{top: 49%; left: 140%;}
+	to{top: 49%; left: 80.6%;}
+}
+.people8{
+    position: absolute;
+    top: 60%;
+    left: 7%;
+    width: 22%;
+    animation: people8 3s;
+}
+@keyframes people8{
+	from{top: 80%; left: -30%;}
+	to{top: 60%; left: 7%}
+}
+.people9{
+    position: absolute;
+    top: 63%;
+    left: 35%;
+    width: 23%;
+    animation: people9 3s;
+}
+@keyframes people9{
+	from{top: 130%; left:15%;}
+	to{top: 63%; left: 35%;}
+}
+.people10{
+    position: absolute;
+    top: 59%;
+    left: 63%;
+    width: 25.5%;
+    animation: people10 3s;
+}
+@keyframes people10{
+	from{top: 130%; left: 80%;}
+	to{top: 59%; left: 63%;}
+}
+.many-people{
+    position: absolute;
+    width: 19%;
+    top: 56.7%;
+    left: 41.7%; 
+    animation: many-people 3s;   
+}
+@keyframes many-people{
+	from{top: 120%; left: 41.7%;}
+	to{top: 56.7%; left: 41.7%; }
+}
+/*@keyframes many-people{
+	0%{ width: 23%; }
+	25%{ width: 19%; }
+	50%{ width: 23%; }
+	75%{ width: 19%; }
+	100%{ width: 23%; }
+}*/
+.p7-btnBox{
+    position: absolute;
+    left: 0;
+    margin-top: 120%;
+    padding-left: 3%;
+    width: 100%;
+    z-index: 999;
+/*    bottom: 18%;*/
+}
+.p7-btn{
+    float: left;
+    width: 28%;
+    padding: 0.3rem 0;
+    text-align: center;
+    color: #4e4e4e;
+    border: 2px dashed #040404;
+    border-radius: 5%;
+    background: #fff;
+    font-size: 2rem;
+    margin-right: 3.4%;
+    position: relative;
+    z-index: 20;
+    list-style: none;
+}
+.p7-messageBox{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    z-index: 10000; 
+    /* display: none;    */
+}
+.p7-messagePgae{
+    position: absolute;
+    width: 80%;
+    margin-top: 50%;
+    margin-left: 10%;
+    float: left;
+}
+.bottomBox{
+	position: absolute;
+	height: 60%;
+	width: 100%;
+	bottom: 0%;
+
+	
+	display: flex;
+	justify-content:center; 
+	align-items:center; 
+}
+.p7-guidBox{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+    z-index: 10000; 
+    display: none;  
+
+}
+.p7-guid-hint{
+	position: absolute;
+	left: 20%;
+	bottom: 0%;
+    width:60%;
+    height:auto;
+}
+.p7-warn-Box{
+    position: absolute;
+    width: 100%;
+/*	margin-top: -15%;*/
+	left: 0%;
+    bottom: 5%;
+    
+    display: flex;
+	justify-content:center; 
+	align-items:center; 
+}
+.p7-warn{
+    display: block;
+    width: 15%;
+}

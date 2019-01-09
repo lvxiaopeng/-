@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="format-detection" content="telephone=no, email=no" />
+        <meta name="full-screen" content="true" />
+        <meta name="screen-orientation" content="portrait" />
+        <meta name="x5-fullscreen" content="true" />
+        <meta name="360-fullscreen" content="true" />
+        <link rel="stylesheet" type="text/css" href="css/p9.css">
+          <title></title>
+</head>
+<body>
+    <div class="p9">
+        <div class="p9-box">
+        	<img class="sharehint" id="p9_sharehint" src="img/sharehint.png" onclick="quxiao()">
+            <img class="p9-title" src="img/last/last-title.png">
+            <img class="p9-right" src="img/last/right-sanjiao.png">
+            <img class="p9-table" src="img/last/last-table.png">
+            <img class="p9-car" src="img/last/last-car.png">
+            <img class="p9-bg" src="img/last/white-bg.png">
+            <img class="p9-bg-down" src="img/last/newBG.png">
+        </div>
+        <div class="p9-inputBox">
+            <div class="p9-inputmessageBox">
+                <div class="p9-message">
+                	<div class="p9-first-items">
+                    	<span class="p9-input-box">
+                        	<b>城市:</b>
+                        	<select id="p9_input_city">
+                            	<option value="0" class="last-0"></option>
+                            	<option value="上海">上海</option>
+                            	<option value="沈阳">沈阳</option>
+                            	<option value="广州">广州</option>
+                            	<option value="北京">北京</option>
+                        	</select>
+                    	</span>
+                    	<span class="p9-input-box last-name-bx">
+                        	<b>姓名:</b>
+                        	<input id="p9_input_name" type="text" value="">
+                    	</span>
+                    	<span class="p9-input-box span-third">
+                        	<b>电话:</b>
+                        	<input id="p9_input_phone" type="tel" value="">
+                    	</span>
+                    	<a href="javascript:;" class="p9-try" onclick="pops()">快来约一驾</a>
+                    </div>
+                    <div class="p9-hr"></div>
+                    <div class="p9-btn-box">
+                        <a href="javascript:;" class="p9-again" onClick="location.href='page.html'">再玩一次</a>
+                        <a href="javascript:;" class="p9-btn-alert" onclick="friends()" >考考别人</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+	function pops(){
+		var p9City = document.getElementById('p9_input_city');
+		var p9Name = document.getElementById('p9_input_name');
+		var p9Phone = document.getElementById('p9_input_phone');
+
+		alert('您选择的城市是：' + p9City.value + '您的姓名是：' + p9Name.value + '您的手机号是：' + p9Phone.value);
+	};
+	function friends(){
+		var p9LastPic = document.getElementById('p9_sharehint');
+		
+		p9LastPic.style.display='block';
+	}
+	function quxiao(){
+		var p9quxiao = document.getElementById('p9_sharehint');
+		
+		p9quxiao.style.display='none';
+	}
+</script>
+</html>

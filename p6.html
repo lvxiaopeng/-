@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" /> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="full-screen" content="true" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+    <link rel="stylesheet" type="text/css" href="css/p6.css">
+      <title></title>
+</head>
+<body>
+    <div class="p6">
+        <div class="p6-box">
+            <img class="p6-bg-orange" src="img/page6/p6bg2.png">
+            <img class="p6-bg-down" src="img/page6/p6bg1.png">
+            <img class="p6-title" src="img/page6/p6-title.png">
+            <img class="p6-good p6-good1" src="img/page6/p6-goods1.png">
+            <img class="p6-good p6-good2" src="img/page6/p6-goods2.png">
+            <img class="p6-good p6-good3" src="img/page6/p6-goods3.png">
+            <img class="p6-good p6-good4" src="img/page6/p6-goods4.png">
+            <img class="p6-good p6-good5" src="img/page6/p6-goods5.png">
+            <img id="p6_wrong" class="p6_wrong" src="img/false.png" />
+            <img id="p6_right" class="p6_right" src="img/right.png" />
+            <span id="p6Move" class="p6-btn p6_moveStyle">6万</span>
+            <ul class="p6-btn-box">
+                <li class="p6-btn" onclick="wrong()">20万</li>
+                <li class="p6-btn" onclick="wrong()">10万</li>
+                <li id="p6Six" class="p6-btn money-six" onclick="p6Bingo()">4.7万</li>
+            </ul>
+            <img src="img/game5.png" id="p6_goNext" onClick="location.href='p7.html'">
+            <div id="message-Box" class="message-Box">
+                <img id="p6_message" class="p6-hint" src="img/game5_hint.png" >
+            </div>
+            <div class="p6-warn-box">
+                <img class="p6-warn" src="img/warn.png" onclick="showIt()">
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+	var picSix = document.getElementById('p6Six');
+	var obj = document.getElementById('p6Move');
+	var p6Right = document.getElementById('p6_right');
+	obj.addEventListener('touchmove', function(event) {
+    // 如果这个元素的位置内只有一个手指的话
+	    if (event.targetTouches.length == 1) {
+	　　　　 event.preventDefault();// 阻止浏览器默认事件，重要 
+	        var touch = event.targetTouches[0];
+	        // 把元素放在手指所在的位置
+	        	obj.style.left = touch.pageX-50 + 'px';
+	        	obj.style.top = touch.pageY-0 + 'px';
+	        	
+	        	var top = parseInt(touch.pageY-0)
+	        	var left = parseInt(touch.pageX-0)
+	        	
+	        	picSix.style.display='inline';
+	        }
+	}, false);	
+	
+	function showIt(){
+//	var p5_w=document.getElementsByClassName('p5_warn');
+	var p5_h=document.getElementById('message-Box');
+	
+	if(p5_h.style.display=='none'){
+		p5_h.style.display='block';
+		
+	}else{
+		p5_h.style.display='none';
+	}
+	}
+	
+	function p6Bingo(){
+		var goNext = document.getElementById('p6_goNext');
+		var p6Right = document.getElementById('p6_right');
+		p6Right.style.display='block';
+		setInterval(function(){
+			goNext.style.display='block';
+		},2000)
+	};
+	function wrong(){
+		var btnwrong = document.getElementsByClassName('p6-btn')[0];
+		var picWrong =document.getElementsByClassName('p6_wrong')[0];
+
+		picWrong.style.display='none';
+		picWrong.style.display='block';
+		setTimeout(function() {
+			picWrong.style.display = "none";
+		},1000);
+	};	
+</script>
+</html>

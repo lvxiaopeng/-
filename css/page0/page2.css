@@ -1,0 +1,41 @@
+@charset "utf-8";
+html{
+  font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: none;
+}
+body{
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+  overflow: hidden;
+  font-family: '微软雅黑';
+  -webkit-font-smoothing: antialiased;
+}
+/*.p0{
+  width:100%;
+  max-height:600px;
+  background-image:url('page0/p0bg.png');
+
+}*/
+.p2{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      margin-top: 0px;
+      margin-left: 0px;
+      /* float: left; */
+      background-image: url('img/page2/p2bg.png');
+  }

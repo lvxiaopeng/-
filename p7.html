@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="format-detection" content="telephone=no, email=no" />
+        <meta name="full-screen" content="true" />
+        <meta name="screen-orientation" content="portrait" />
+        <meta name="x5-fullscreen" content="true" />
+        <meta name="360-fullscreen" content="true" />
+        <link rel="stylesheet" type="text/css" href="css/p7.css">
+        <script type="text/javascript" src="jquery-2.1.0.js" ></script>
+          <title></title>
+</head>
+<body>
+    <div class="p7">
+        <div id="p7-box">
+            <img class="p7-bg" src="img/page7/p7bg2.png">
+            <img class="p7-title" src="img/page7/p7-title.png">
+            <img class="big-card p7-car-big" src="img/page7/big-card.png">
+            <div id="con" class="p7-people">
+            <img class="p7_wrong" src="img/false.png" />
+            <img class="p7_right" src="img/right.png" />
+      		
+            	
+
+                <ul class="p7-btnBox">
+                    <li class="p7-btn" onclick="wrong()">3个</li>
+                    <li class="p7-btn" onclick="wrong()">4个</li>
+                    <li class="p7-btn" onclick="wrong()">5个</li>
+                </ul>
+                <div class="p7-messageBox">
+                    <img class="p7-messagePgae" src="img/game6.png">
+                </div>
+             
+                
+                <div class="bottomBox">
+                    <div class="p7-guidBox">
+                		<img class="p7-guid-hint" src="img/game6_hint.png"> 
+                	</div>                 
+                	<div class="p7-warn-Box">
+                    	<img class="p7-warn" src="img/warn.png" onclick="showIt()">
+                	</div>            	
+                </div>
+                <div class="imgBox" id="p7_peopleBox">
+	                <div id="img">
+						<img class="people1" src="img/page7/1.png">
+						<img class="people2" src="img/page7/2.png">
+						<img class="people3" src="img/page7/3.png">
+						<img class="people4" src="img/page7/4.png">
+						<img class="people5" src="img/page7/5.png">
+						<img class="people6" src="img/page7/6.png">
+						<img class="people7" src="img/page7/7.png">
+						<img class="people8" src="img/page7/8.png">
+						<img class="people9" src="img/page7/9.png">
+						<img class="people10" src="img/page7/10.png">
+						<img class="many-people" src="img/page7/many-people.png" onClick="location.href='p8.html'">       		
+					</div> 
+				</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+        var touchScale = function(seletor, bg) {
+            var startX, endX, scale, x1, x2, y1, y2, imgLeft, imgTop, imgWidth, imgHeight,
+                one = false, 
+                $touch = $(seletor),
+                originalWidth = $touch.width(),
+                originalHeight = $touch.height(),
+                baseScale = parseFloat(originalWidth/originalHeight),
+                imgData = [],
+                bgTop = parseInt($(bg).css('top'));
+            function siteData(name) {
+                imgLeft = parseInt(name.css('left'));
+                imgTop = parseInt(name.css('top'));
+                imgWidth = name.width();
+                imgHeight = name.height();
+            }
+            $(document).on('touchstart touchmove touchend', $(seletor).parent().selector, function(event){
+                var $me = $(seletor),
+                    touch1 = event.originalEvent.targetTouches[0],  // 第一根手指touch事件
+                    touch2 = event.originalEvent.targetTouches[1],  // 第二根手指touch事件
+                    fingers = event.originalEvent.touches.length;   // 屏幕上手指数量
+                //手指放到屏幕上的时候，还没有进行其他操作
+                if (event.type == 'touchstart') {
+                    if (fingers == 2) {
+                        // 缩放图片的时候X坐标起始值
+                        startX = Math.abs(touch1.pageX - touch2.pageX);
+                        one = false;
+                    }
+                    else if (fingers == 1) {
+                        x1 = touch1.pageX;
+                        y1 = touch1.pageY;
+                        one = true;
+                    }
+                    siteData($me);
+                }
+                //手指在屏幕上滑动
+                else if (event.type == 'touchmove') {
+                	if (fingers == 2) {
+                		var peopleBox = document.getElementById('p7_peopleBox');
+                		
+                		peopleBox.style.display='block';
+                	}
+//                  if (fingers == 2) {
+//                      // 缩放图片的时候X坐标滑动变化值
+//                      endX = Math.abs(touch1.pageX - touch2.pageX);
+//                      scale = endX - startX;
+//                      $me.css({
+//                          'width' : originalWidth + scale,
+//                          'height' : (originalWidth + scale)/baseScale,
+//                          'left' : imgLeft,
+//                          'top' : imgTop
+//                      });
+//                      
+//                  }
+//                  else if (fingers == 1) {
+//                      x2 = touch1.pageX;
+//                      y2 = touch1.pageY;
+//                      if (one) {
+//                          $me.css({
+//                              'left' : imgLeft + (x2 - x1),
+//                              'top' : imgTop + (y2 - y1)
+//                          });
+//                      }
+//                  }
+                }
+                //手指移开屏幕
+                else if (event.type == 'touchend') {
+                    // 手指移开后保存图片的宽
+                    originalWidth = $touch.width(),
+                    siteData($me);
+                    imgData = [[imgLeft, imgTop-bgTop, imgWidth, imgHeight],[0, 0, 640, 640]];
+                }
+            });
+            var getData = function(){
+                return imgData;
+            };
+            return {
+                imgData : getData
+            }
+        };
+        
+        touchScale($('#img'),$('#con'))	
+        
+function wrong(){
+	var btnwrong = document.getElementsByClassName('p7-btn')[0];
+	var picWrong =document.getElementsByClassName('p7_wrong')[0];
+
+	picWrong.style.display='none';
+	picWrong.style.display='block';
+	setTimeout(function() {
+		picWrong.style.display = "none";
+	},1000);
+}
+
+function showIt(){
+	var p7_w=document.getElementsByClassName('p7_warn')[0];
+	var p7_h=document.getElementsByClassName('p7-guidBox')[0];
+	if(p7_h.style.display=='none'){
+		p7_h.style.display='block';
+		
+	}else{
+		p7_h.style.display='none';
+	}
+	}
+</script>
+</html>

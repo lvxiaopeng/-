@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="full-screen" content="true" />
+  <meta name="screen-orientation" content="portrait" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="360-fullscreen" content="true" />
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="css/page2.css">
+
+</head>
+<body>
+	<div class="p2" id="alpha" id='beta' id="gamma">
+		<img src="./img/page2/p2-title.png" class="p2-t">
+		<div class="car">
+		<img src="./img/page2/p2-car.png" onclick="test()" id="thisCar" class="p2-car">
+		<img src="./img/page2/car-back.png" alt="" / class="c_p" id="c_p">
+		<img src="./img/page2/boxs6.png" id="boxs6">
+		<img src="./img/page2/boxs5.png" id="boxs5">	
+		<img src="./img/page2/boxs4.png" id="boxs4">
+		<img src="./img/page2/boxs2.png" id="boxs2">
+		<img src="./img/page2/boxs3.png" id="boxs3">
+		<img src="./img/page2/boxs1.png" id="boxs1">
+		<img src="./img/page2/boxs0.png" id="boxs0">
+		<div>
+			<img src="./img/warn.png" class="warn" onclick="showIt()">
+			<div>
+				<img src="./img/game1_hint.png" class="p1_h1" style="display:none">
+			</div>
+		</div>
+		<img src="./img/right.png" class="right" id="Right">
+		<img src="img/game2.png" class="g" id="message" onClick="location.href='page3.html'">
+	</div>
+</body>
+	<!--<script type="text/javascript" src="jquery-1.11.3.js" ></script>-->
+	<script src="js/ion.sound.js"></script>
+	<script type="text/javascript">
+window.onload = function(){
+		ion.sound({
+    sounds: [
+    	{name: "bgm"},
+        {name: "car"},
+        {name: "gz"},
+    ],
+    path: "music/",
+    preload: true,
+    volume: 1.0
+	});
+	 ion.sound.play("car");	
+	}		
+		
+		
+    function showIt(){
+      var p1_h=document.getElementsByClassName("p1_h1")[0];
+      if(p1_h.style.display=="none"){
+        p1_h.style.display="block";
+      }else{
+        p1_h.style.display="none";
+      }
+    }
+if(window.DevicaOrientationEvent){
+  window.addEventListener('deviceorientation',function (event){
+    	var a=documnet.getElementById('alpha'),
+    		  b=documnet.getElementById('beta'),
+    			g=documnet.getElementById('gamma'),
+    			alpha=event.alpha,
+    			beta=event.beta,
+    			gamma=event.gamma;
+  },false);
+}
+var currhandle=0;//判断操作是否完成
+if(window.DeviceMotionEvent){
+  var speed = 15;  
+  var x = y = z = lastX = lastY = lastZ = 0;  
+  window.addEventListener('devicemotion', function(){  
+    var acceleration =event.accelerationIncludingGravity;  
+        x = acceleration.x;  
+        y = acceleration.y;  
+        z = acceleration.z;
+  if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed || Math.abs(z-lastZ) > speed+10) {  
+    if(currhandle==0){
+      //alert('判定');
+      hq();
+      //摇一摇事件触发后执行操作
+      currhandle=1;
+    }	
+  }  
+  lastX = x;  
+  lastY = y;  
+  lastZ = z;
+}, true);  
+}else{
+  alert("您的设备不支持感应设备");    
+}
+function hq() {
+	
+	var b6 = document.getElementById('boxs6');
+	var b5 = document.getElementById('boxs5');
+	var b4 = document.getElementById('boxs4');
+	var b3 = document.getElementById('boxs3');
+	var b2 = document.getElementById('boxs2');
+	var b1 = document.getElementById('boxs1');
+	var b0 = document.getElementById('boxs0');
+	var cp = document.getElementById('c_p');
+	b6.style.display = 'block';
+	b5.style.display = 'block';
+	b4.style.display = 'block';
+	b3.style.display = 'block';
+	b2.style.display = 'block';
+	b1.style.display = 'block';
+	b0.style.display = 'block';
+	cp.style.display = 'block';
+	
+	right();
+}
+function right(){
+	var r=document.getElementById('Right');
+	var Msg = document.getElementById('message');
+	
+	
+	var Timer = 0;
+	
+	setInterval(function(){
+		
+		Timer += 0.5;
+		
+		if(Timer == 1){
+			r.style.display="block";
+		}else if(p2Timer == 3){
+			Msg.style.display='block';
+		}
+		
+	},500);
+	
+}
+//function test(){
+//	
+//	var right = document.getElementById('p2Right');
+//	
+//	right.style.display='block';
+//	
+//	mesBox();
+//	var p2car = document.getElementById('thisCar');
+//	
+//	var b6 = document.getElementById('boxs6');
+//	var b5 = document.getElementById('boxs5');
+//	var b4 = document.getElementById('boxs4');
+//	var b3 = document.getElementById('boxs3');
+//	var b2 = document.getElementById('boxs2');
+//	var b1 = document.getElementById('boxs1');
+//	var b0 = document.getElementById('boxs0');
+//	
+//	b6.style.display = 'block';
+//	b5.style.display = 'block';
+//	b4.style.display = 'block';
+//	b3.style.display = 'block';
+//	b2.style.display = 'block';
+//	b1.style.display = 'block';
+//	b0.style.display = 'block';
+//}
+	</script>	
+</html>

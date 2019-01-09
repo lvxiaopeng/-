@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="full-screen" content="true" />
+  <meta name="screen-orientation" content="portrait" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="360-fullscreen" content="true" />
+  <link rel="stylesheet" type="text/css" href="css/p0-1.css">
+	<title></title>
+</head>
+<body>
+	<div class="p0">
+		<div class="loader">
+      <div class="car">
+        	<span class="p0-pro" id="sl"></span>
+        	<span class="p0-sj"></span>
+        <div class="jd">
+        	<div class="jdt"></div>
+        </div>
+        <img src="img/page0/p0-car.png" class="p0_car">
+      </div>
+      <div class="pt">
+        <img src="img/page0/p0-title.png" class="p0_title">
+      </div>
+      <div class="progress">
+          <img src="img/page0/progress-bar.png" class="p0_progress">
+      </div>
+    </div>
+	</div>
+	<script type="text/javascript">
+		var i = 0;
+function doit(){
+   i = i + 1;
+   var o = document.getElementById('sl');
+   o.innerHTML = i.toString()+'%';
+   if(i<100) {
+    setTimeout('doit()',27);
+  }
+   else{
+    location.href="page1.html";
+  }
+}
+
+
+//}
+doit();
+
+
+	</script>
+</body>
+</html>
